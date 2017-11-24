@@ -1,3 +1,11 @@
+This forked repo of `https://github.com/skylarstein/adxl345-sensor` adds computation for the magnitude of the acceleration vectors x, y, & z.
+
+
+# Installation
+```bash
+npm install https://github.com/bgsuello/adxl345-sensor
+```
+
 # adxl345-sensor
 [<img src="https://img.shields.io/badge/Node.js-4.x%20through%207.x-brightgreen.svg">](https://nodejs.org) [<img src="https://img.shields.io/npm/v/adxl345-sensor.svg">](https://www.npmjs.com/package/adxl345-sensor)
 
