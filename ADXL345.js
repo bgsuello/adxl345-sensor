@@ -86,10 +86,12 @@ class ADXL345 {
           let y = this.int16(buffer[3], buffer[2]) * this.ADXL345_MG2G_SCALE_FACTOR;
           let z = this.int16(buffer[5], buffer[4]) * this.ADXL345_MG2G_SCALE_FACTOR;
 
+          let magnitude = 0;
           resolve({
             x : gForce ? x : x * this.EARTH_GRAVITY_MS2,
             y : gForce ? y : y * this.EARTH_GRAVITY_MS2,
             z : gForce ? z : z * this.EARTH_GRAVITY_MS2,
+            magnitude: Math.sqrt(x^2 + y^2 + z^2),
             units : gForce ? 'g' : 'm/s²'});
         });
       });
