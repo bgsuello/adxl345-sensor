@@ -91,7 +91,7 @@ class ADXL345 {
             x : gForce ? x : x * this.EARTH_GRAVITY_MS2,
             y : gForce ? y : y * this.EARTH_GRAVITY_MS2,
             z : gForce ? z : z * this.EARTH_GRAVITY_MS2,
-            magnitude: Math.sqrt(x^2 + y^2 + z^2),
+            magnitude: Math.sqrt(Math.pow(x,2) + Math.pow(y, 2) + Math.pow(z, 2)),
             units : gForce ? 'g' : 'm/s²'});
         });
       });
